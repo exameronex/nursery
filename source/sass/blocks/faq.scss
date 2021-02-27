@@ -1,0 +1,119 @@
+.faq {
+  background-color: $gray-first;
+}
+
+.faq__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.faq__title {
+  margin-bottom: 20px;
+}
+
+.faq__subtitle {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 177px;
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.faq__list {
+  counter-reset: faq-counter;
+  @media (min-width: $tablet-width) {
+    width: 89.1%;
+    margin: 0 auto;
+  }
+  @media (min-width: $desctop-width) {
+    width: 70%;
+  }
+}
+
+.faq__item {
+  counter-increment: faq-counter;
+  margin-bottom: 30px;
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-left: 82px;
+    &::before {
+      content: "0"counter(faq-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 59px;
+      color: #a07b50;
+    }
+    @media (min-width: $desctop-width) {
+      padding-left: 116px;
+      &::before {
+        top: 24px;
+        font-size: 70px;
+      }
+    }
+  }
+}
+
+.faq__question {
+  position: relative;
+  border: none;
+  width: 100%;
+  padding: 12px 17% 10px 14px;
+  background: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #DDD0C3;
+  text-align: left;
+  border: 0.5px solid #544332;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14.3%;
+    height: 100%;
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-left: 1px solid #a07b50;
+  }
+  &--active {
+    &::after {
+      background: #A07B50;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/activeQuestion.svg);
+    }
+  }
+  @media (min-width: $tablet-width) {
+    padding: 21px 140px 16px 29px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  @media (min-width: $desctop-width) {
+    padding: 47px 15% 43px 42px;
+  }
+}
+
+.faq__answer {
+  border: 0.5px solid #544332;
+  padding: 15px 27px 15px 15px;
+  color: #DDD0C3;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.faq__answer p {
+  margin: 0;
+  margin-bottom: 10px;
+}

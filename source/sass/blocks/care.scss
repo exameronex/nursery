@@ -1,0 +1,110 @@
+.care {
+  background-image: url("../img/bg-care-tablet@1x.jpg");
+  background-size: cover;
+  background-color: #151313;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .care {
+    background-image: url("../img/bg-care-tablet@2x.jpg");
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .care {
+    background-image: url("../img/bg-care-desktop@1x.jpg");
+  }
+}
+
+@media (min-width: $desctop-width) and (-webkit-min-device-pixel-ratio: 1.5),
+(min-width: $desctop-width) and (min-resolution: 144dpi),
+(min-width: $desctop-width) and (min-resolution: 1.5dppx) {
+  .care {
+    background-image: url("../img/bg-care-desktop@2x.jpg");
+    background-position: 50% 0;
+  }
+}
+
+.care__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.care__title {
+  margin-bottom: 40px;
+}
+
+.care__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  @media (min-width: $tablet-width) {
+    width: 75%;
+  }
+  @media (min-width: $desctop-width) {
+    width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.care__item {
+  margin-bottom: 30px;
+  &:hover {
+    background-color: #A07B50;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 560px;
+  }
+}
+
+.care__link {
+  display: block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0.5px solid #A07B50;
+  padding: 21px 18% 18px 24px;
+  min-height: 152px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15.6%;
+    height: 100%;
+    background-color: #a07b50;
+    border-left: 1px solid #a07b50;
+    background-image: url(../img/arrowDetails.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s ease-out;
+  }
+}
+
+.care__item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #A07B50;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.care__item-content {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+

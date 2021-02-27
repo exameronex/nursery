@@ -1,0 +1,138 @@
+.pets {
+  background-color: $gray-first;
+}
+
+.pets__container {
+  padding-top: 60px;
+}
+
+.pets__title {
+  margin-bottom: 35px;
+}
+
+.pets__subtitle {
+  max-width: 516px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.pets__list {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 234px;
+}
+
+.pets__tab {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.2);
+  &--active {
+    color: #FFFFFF;
+  }
+}
+
+.pets__tab-content {
+  max-width: 500px;
+  margin: 0 auto;
+  @media (min-width: $desctop-width) {
+    max-width: 1060px;
+  }
+}
+
+.pets__slider-container {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  @media (min-width: $desctop-width) {
+    width: 1060px;
+  }
+}
+
+.pets__tab-content-wrapper {
+  margin-bottom: 45px;
+}
+
+.pets__gallery {
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+  @media (min-width: $desctop-width) {
+    column-count: 2;
+  }
+}
+
+.pets__gallery-item--back {
+  @media (min-width: $tablet-width) {
+    width: 430px;
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 100px);
+    @media (min-width: $desctop-width) {
+      width: 519px;
+    }
+  }
+
+  @media (min-width: $desctop-width) {
+    position: static;
+  }
+}
+
+.pets__gallery-item--left {
+  @media (min-width: $tablet-width) {
+    left: 20%;
+  }
+}
+
+.pets__gallery-item--right {
+  @media (min-width: $tablet-width) {
+    right: 20%;
+  }
+}
+
+.pets__gallery-item--active {
+  position: relative;
+  z-index: 50;
+}
+
+.pets__gallery-item--back .pets__gallery-img {
+  height: 197px;
+  width: 100%;
+  object-fit: cover;
+  @media (min-width: $desctop-width) {
+    height: 240px;
+    width: 519px;
+  }
+}
+
+.pets-slide {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.pets__slider-button {
+  @media (min-width: $desctop-width) {
+    display: none;
+  }
+}
+
+.pets__slider-button--prev {
+  @media (min-width: $tablet-width) {
+    left: -15%;
+  }
+}
+
+.pets__slider-button--next {
+  @media (min-width: $tablet-width) {
+    right: -15%;
+  }
+}
+
+.pets__button {
+  margin: 0 auto;
+}

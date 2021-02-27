@@ -1,0 +1,13 @@
+.title {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  font-size: 28px;
+  line-height: 32px;
+  @media (min-width: $desctop-width) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
